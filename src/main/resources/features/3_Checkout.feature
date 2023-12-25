@@ -9,7 +9,7 @@ Feature: User Checkout
     And User add to cart 1
     Then User added items to cart
 
-  Scenario Outline: User checkout process
+  Scenario Outline: User check items cart
     When User click cart button
     And User cart <item> right <name> and <price>
     And User click checkout button
@@ -39,6 +39,8 @@ Feature: User Checkout
 
   Scenario: User finish checkout
     When User click finish button
-    And Show success order
-    And User click back home button
+    Then Show success order
+
+  Scenario: User back to page products
+    When User click back home button
     Then User redirect to page products

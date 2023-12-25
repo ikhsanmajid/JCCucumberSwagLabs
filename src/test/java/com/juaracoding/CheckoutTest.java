@@ -95,12 +95,12 @@ public class CheckoutTest {
         inventoryPage.clickFinishBtn();
     }
 
-    @And("Show success order")
+    @Then("Show success order")
     public void show_success_order(){
         Assert.assertEquals(inventoryPage.getSuccessOrderText(), "Thank you for your order!");
     }
 
-    @And("User click back home button")
+    @When("User click back home button")
     public void user_click_back_home_button(){
         inventoryPage.clickBackToHomeBtn();
     }

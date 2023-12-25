@@ -1,11 +1,4 @@
 Feature: User Login
-  Scenario: User Login Valid
-    Given User enter URL web SwagLabs
-    When User enter username
-    And User enter password
-    And User click login button
-    Then User login successful redirect to page home
-
   Scenario Outline: User Login with invalid username or password
     Given User enter URL web SwagLabs
     When User enter invalid <username> or <password>
@@ -28,3 +21,10 @@ Feature: User Login
       | "standard_user" | "" |
       | "" | "secret_sauce" |
       | "" | "" |
+    
+  Scenario: User Login Valid
+    Given User enter URL web SwagLabs
+    When User enter username
+    And User enter password
+    And User click login button
+    Then User login successful redirect to page home
