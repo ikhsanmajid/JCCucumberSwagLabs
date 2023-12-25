@@ -17,7 +17,6 @@ Feature: User Login
       | "standard_user" | "secret_sauce123" |
       | "standard_user123" | "secret_sauce" |
 
-
   Scenario Outline: User Login with empty password or username
     Given User enter URL web SwagLabs
     When User enter empty <username> or <password>
